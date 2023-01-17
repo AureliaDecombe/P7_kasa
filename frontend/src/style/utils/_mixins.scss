@@ -1,0 +1,81 @@
+/*----------------------------display------------------------------*/
+@mixin flex-basic {
+  display: flex;
+  align-items: center;
+}
+@mixin flex-full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-column {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+} //OK
+@mixin flex-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+/*-----------------------------typo------------------------------*/
+@mixin instruction-card__typo {
+  padding: 0 1em;
+  font-size: x-large;
+}
+@mixin hx-style {
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+@mixin hx-style__menu {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+/*----------------------------shadow------------------------------*/
+@mixin new-shadow($color: lightness-shift($color-tertiary)) {
+  color: $color;
+  background-color: $color-tertiary;
+}
+
+/*-----------------------------color------------------------------*/
+@mixin instructions-background($color: lightness-shift($background)) {
+  color: $color;
+  background-color: $background;
+}
+
+/*----------------------------pseudo------------------------------*/
+@mixin btn-hover {
+  background: $btn-background--hover;
+  box-shadow: rgb(149 157 165 / 40%) 1px 8px 10px 6px;
+}
+
+/*---------------------------component------------------------------*/
+@mixin image {
+  overflow: hidden;
+  position: relative;
+}
+@mixin img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*---------------------------margin------------------------------*/
+@mixin margin-underline {
+  margin-bottom: 20px;
+  margin-top: 8px;
+}
+
+/*-------------------------animations----------------------------*/
+@mixin anim--menu__choice {
+  animation: $anim--menu__title;
+  @for $i from 1 through $menu-item__number {
+    &--#{$i} {
+      animation-delay: $menu-item__delay * $i;
+    }
+  }
+}

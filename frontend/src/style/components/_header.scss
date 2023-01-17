@@ -1,0 +1,15 @@
+.headerDiv {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    height: 68px;
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+  }
+}

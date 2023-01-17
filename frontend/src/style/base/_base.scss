@@ -1,0 +1,70 @@
+/*-------------My normalize------------------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+button {
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  padding: 0;
+  cursor: pointer;
+}
+figure {
+  margin: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: outside;
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+p {
+  margin: 0;
+}
+fieldset {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/*------------------Basics------------------------------*/
+
+body {
+  width: 100%;
+  margin: 0;
+  .pageWrapper {
+    width: auto;
+    margin: auto;
+    max-width: 1240px;
+    letter-spacing: 0.01em;
+    font-family: $font-primary, sans-serif;
+    color: $color-primary;
+  }
+  img {
+    object-fit: contain;
+    width: 100%;
+  }
+}
