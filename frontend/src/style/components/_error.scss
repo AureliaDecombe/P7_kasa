@@ -1,0 +1,29 @@
+.errorPage {
+  color: $color-primary;
+  @include flex-column;
+  height: 750px;
+  align-content: center;
+  font-family: $font-primary;
+  &__headerDiv {
+    padding: 30px 0;
+    width: 90%;
+    @include flex-space;
+    &--logo {
+      height: 68px;
+    }
+    &--nav {
+      @include flex-space;
+      width: 200px;
+      font-size: $medium;
+    }
+  }
+  &__logo {
+    height: 250px;
+  }
+  &__span {
+    font-size: $large;
+  }
+  &__link {
+    font-size: $small;
+  }
+}

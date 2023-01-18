@@ -18,7 +18,12 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-}
+} //OK
+@mixin flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} //OK
 
 /*-----------------------------typo------------------------------*/
 @mixin instruction-card__typo {

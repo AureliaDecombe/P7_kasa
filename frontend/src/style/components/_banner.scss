@@ -1,0 +1,27 @@
+.banner {
+  &__background {
+    position: relative;
+    background: $black-background;
+    border-radius: 25px;
+    height: 222px;
+  }
+  &__img {
+    position: absolute;
+    left: 100px;
+    top: 128px;
+    height: 223px;
+    opacity: 0.7;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  &__span {
+    position: absolute;
+    left: 28%;
+    right: 25.14%;
+    top: 70%;
+    bottom: 69.04%;
+    z-index: 1;
+    color: $color-secondary;
+    font-size: $xLarge;
+  }
+}
