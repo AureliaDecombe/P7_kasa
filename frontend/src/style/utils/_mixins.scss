@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} //OK
 @mixin flex-column {
   display: flex;
   flex-flow: column wrap;
@@ -24,12 +24,25 @@
   justify-content: space-between;
   align-items: center;
 } //OK
+@mixin flex-space-simple {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} //OK
+@mixin flex-flexEnd {
+  display: flex;
+  align-items: flex-end;
+} //OK
+@mixin flex-row-simple {
+  display: flex;
+  flex-flow: row wrap;
+} //OK
 
 /*-----------------------------typo------------------------------*/
-@mixin instruction-card__typo {
-  padding: 0 1em;
-  font-size: x-large;
-}
+@mixin card__typo {
+  color: $color-secondary;
+  font-size: $small;
+} //OK
 @mixin hx-style {
   font-weight: bold;
   padding-bottom: 15px;
@@ -38,6 +51,13 @@
   font-weight: bold;
   padding-bottom: 5px;
 }
+
+/*----------------------------sizing------------------------------*/
+@mixin card-sizing {
+  border-radius: 10px;
+  height: 340px;
+  width: 340px;
+} //OK
 
 /*----------------------------shadow------------------------------*/
 @mixin new-shadow($color: lightness-shift($color-tertiary)) {
@@ -61,7 +81,7 @@
 @mixin image {
   overflow: hidden;
   position: relative;
-}
+} // OK
 @mixin img {
   position: absolute;
   top: 50%;

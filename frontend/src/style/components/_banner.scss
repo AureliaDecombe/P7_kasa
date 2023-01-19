@@ -1,27 +1,14 @@
 .banner {
-  &__background {
-    position: relative;
-    background: $black-background;
-    border-radius: 25px;
-    height: 222px;
-  }
-  &__img {
-    position: absolute;
-    left: 100px;
-    top: 128px;
-    height: 223px;
-    opacity: 0.7;
-    border-radius: 25px;
-    overflow: hidden;
-  }
+  height: 223px;
+  background: rgba(0, 0, 0, 0.3) url(../../assets/banner.svg);
+  background-blend-mode: darken;
+  border-radius: 25px;
+  overflow: hidden;
+  @include flex-full;
   &__span {
-    position: absolute;
-    left: 28%;
-    right: 25.14%;
-    top: 70%;
-    bottom: 69.04%;
     z-index: 1;
     color: $color-secondary;
+
     font-size: $xLarge;
   }
 }

@@ -1,0 +1,29 @@
+.card {
+  @include card-sizing;
+  @include flex-flexEnd;
+  margin-bottom: 50px;
+  &__image {
+    @include image;
+    top: 5px;
+    &--img {
+      @include card-sizing;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    position: absolute;
+    width: 340px;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+    @include card__typo;
+    @include flex-row-simple;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
