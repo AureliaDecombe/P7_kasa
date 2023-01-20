@@ -58,6 +58,10 @@
   height: 340px;
   width: 340px;
 } //OK
+@mixin card-sizing-768px {
+  height: 255px;
+  width: 315px;
+}
 
 /*----------------------------shadow------------------------------*/
 @mixin new-shadow($color: lightness-shift($color-tertiary)) {

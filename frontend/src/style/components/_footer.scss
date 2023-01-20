@@ -10,4 +10,7 @@
   &__logo {
     height: 40px;
   }
+  @media all and (max-width: 768px) {
+    font-size: $xxSmall;
+  }
 }
