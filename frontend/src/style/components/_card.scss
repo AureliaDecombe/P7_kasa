@@ -28,12 +28,18 @@
   }
   @media all and (max-width: 768px) {
     @include card-sizing-768px;
-    margin: 0 20px 30px 0;
+    margin-bottom: 30px;
     &__image--img {
       @include card-sizing-768px;
     }
     &__title {
       width: 315px;
+    }
+  }
+  @media all and (max-width: 375px) {
+    &__title {
+      width: auto;
+      margin-right: 20px;
     }
   }
 }

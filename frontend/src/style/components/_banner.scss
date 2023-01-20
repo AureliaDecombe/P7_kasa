@@ -1,6 +1,7 @@
 .banner {
   height: 223px;
-  background: rgba(0, 0, 0, 0.3) url(../../assets/banner.svg);
+  background: rgba(0, 0, 0, 0.3);
+  background-image: url(../../assets/banner.svg);
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -24,6 +25,15 @@
     border-radius: 10px;
     &__span {
       font-size: $medium;
+    }
+  }
+  &--about {
+    background-image: url(../../assets/banner_about.svg);
+    @media all and (max-width: 768px) {
+      height: 200px;
+    }
+    @media all and (max-width: 374px) {
+      height: 150px;
     }
   }
 }

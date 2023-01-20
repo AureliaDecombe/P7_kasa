@@ -2,7 +2,7 @@
 @mixin flex-basic {
   display: flex;
   align-items: center;
-}
+} //OK
 @mixin flex-full {
   display: flex;
   justify-content: center;
@@ -43,10 +43,10 @@
   color: $color-secondary;
   font-size: $small;
 } //OK
-@mixin hx-style {
-  font-weight: bold;
-  padding-bottom: 15px;
-}
+@mixin collapse__title {
+  color: $color-secondary;
+  font-size: $medium;
+} //OK
 @mixin hx-style__menu {
   font-weight: bold;
   padding-bottom: 5px;
@@ -56,11 +56,11 @@
 @mixin card-sizing {
   border-radius: 10px;
   height: 340px;
-  width: 340px;
+  max-width: 340px;
 } //OK
 @mixin card-sizing-768px {
   height: 255px;
-  width: 315px;
+  max-width: 315px;
 }
 
 /*----------------------------shadow------------------------------*/
