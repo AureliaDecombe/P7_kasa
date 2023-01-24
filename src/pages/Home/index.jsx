@@ -1,7 +1,7 @@
 import HomePageBanner from "../../components/Banner/HomePage";
 import HomePageGallery from "../../components/Gallery";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className='Home'>
       <div className='mainWrapper'>

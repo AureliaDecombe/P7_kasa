@@ -1,0 +1,23 @@
+.gallery {
+  @include flex-space-wrap;
+  border-radius: 25px;
+  background: $gallery-background;
+  padding: 50px;
+  padding-bottom: 0;
+  margin: 50px 0;
+  height: fit-content;
+  @media all and (max-width: 768px) {
+    background: none;
+    padding: 0;
+    margin: 25px 0;
+  }
+  a {
+    width: 30%;
+    @media all and (max-width: 768px) {
+      width: 48%;
+    }
+    @media all and (max-width: 450px) {
+      width: 100%;
+    }
+  }
+}

@@ -1,7 +1,8 @@
-.card {
+.HomePageCard {
   @include card-sizing;
-  @include flex-flexEnd;
+  @include flex-end;
   margin-bottom: 50px;
+  position: relative;
   &__image {
     @include image;
     top: 5px;
@@ -12,11 +13,11 @@
   }
   &__title {
     position: absolute;
-    width: 340px;
+    width: 100%;
     padding: 15px;
     border-radius: 0 0 10px 10px;
     @include card__typo;
-    @include flex-row-simple;
+    @include flex-row-wrap;
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 0%,
@@ -32,13 +33,9 @@
     &__image--img {
       @include card-sizing-768px;
     }
-    &__title {
-      width: 315px;
-    }
   }
   @media all and (max-width: 375px) {
     &__title {
-      width: auto;
       margin-right: 20px;
     }
   }

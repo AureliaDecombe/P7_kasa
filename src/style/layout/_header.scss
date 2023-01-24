@@ -1,12 +1,13 @@
 .headerDiv {
   padding: 30px;
-  @include flex-space;
+  @include flex-space-center;
   &__logo {
     width: 210px;
   }
   &__nav {
-    @include flex-space;
+    @include flex-space-center;
     width: 200px;
+    font-size: $medium;
   }
   @media all and (max-width: 768px) {
     text-transform: uppercase;

@@ -1,18 +1,18 @@
 .errorPage {
   color: $color-primary;
-  @include flex-column;
+  @include flex-column-around;
   height: 750px;
   align-content: center;
   font-family: $font-primary;
   &__headerDiv {
     padding: 30px;
     width: 90%;
-    @include flex-space;
+    @include flex-space-center;
     &--logo {
       height: 68px;
     }
     &--nav {
-      @include flex-space;
+      @include flex-space-center;
       width: 200px;
       font-size: $medium;
     }

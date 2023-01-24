@@ -6,21 +6,23 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import About from "./pages/About";
-import Home from "./pages/Home";
+import AboutPage from "./pages/About";
+import HomePage from "./pages/Home";
+import ToRentPage from "./pages/ToRent";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ErrorPage from "./components/Error";
 import "./style/index.scss";
 
-export default function Root() {
+function Root() {
   return (
     <>
       <div className='pageWrapper'>
         <Header />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='About' element={<About />} />
+          <Route path='/' element={<HomePage />} />
+          <Route path='About' element={<AboutPage />} />
+          <Route path='ToRent/:id' element={<ToRentPage />} />
         </Routes>
       </div>
       <Footer />
@@ -36,7 +38,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/About",
-        element: <About />,
+        element: <AboutPage />,
+      },
+      {
+        path: "/ToRent/:id",
+        element: <ToRentPage />,
       },
     ],
   },

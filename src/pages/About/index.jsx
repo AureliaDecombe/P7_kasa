@@ -1,8 +1,8 @@
 import AboutPageBanner from "../../components/Banner/AboutPage";
 import Collapse from "../../components/Collapse";
-import { aboutList } from "../../Data/aboutList";
+import { aboutList } from "../../data/aboutList";
 
-export default function About() {
+export default function AboutPage() {
   return (
     <div className='About'>
       <div className='mainWrapper'>

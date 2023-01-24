@@ -1,22 +1,20 @@
 @import "./utils/variables";
-//@import "./utils/functions";
 @import "./utils/mixins";
-//@import "./utils/extensions";
 
 @import "./base/base";
-@import "./base/typography";
 
-//@import "./components/buttons";
+@import "./layout/gallery";
+@import "./layout/header";
+@import "./layout/footer";
 
-@import "./components/header";
-@import "./components/footer";
 @import "./components/error";
 @import "./components/banner";
-@import "./components/gallery";
 @import "./components/card";
 @import "./components/collapse";
+@import "./components/carousel";
 //@import "./components/loader";
 
 @import "./pages/home";
+@import "./pages/toRent";
 //@import "./pages/about";
 //@import "./pages/toRent";

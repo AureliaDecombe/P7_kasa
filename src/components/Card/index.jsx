@@ -10,15 +10,15 @@ export default class Card extends Component {
     const { cover, title } = this.props;
 
     return (
-      <div className='card'>
-        <div className='card__image'>
+      <div className='HomePageCard'>
+        <div className='HomePageCard__image'>
           <img
-            className='card__image--img'
+            className='HomePageCard__image--img'
             src={cover}
             alt='Appartement à louer'
           ></img>
         </div>
-        <div className='card__title'>{title}</div>
+        <div className='HomePageCard__title'>{title}</div>
       </div>
     );
   }

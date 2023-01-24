@@ -1,12 +1,13 @@
 .footerDiv {
   height: 209px;
-  background-color: $black-background;
+  background-color: $footer-background;
   font-family: $font-primary;
   color: $color-secondary;
-  @include flex-column;
+  @include flex-column-around;
   padding: 30px 0;
   position: absolute;
   width: 100%;
+  font-size: $medium;
   &__logo {
     height: 40px;
   }
