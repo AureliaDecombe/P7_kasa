@@ -1,4 +1,4 @@
-.carrousel {
+.carousel {
   display: flex;
   position: relative;
   height: 415px;
@@ -6,6 +6,16 @@
   width: 100%;
   @media all and (max-width: 768px) {
     height: 255px;
+  }
+  &__info {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    font-size: $small;
+    color: $color-secondary;
+    @media all and (max-width: 768px) {
+      font-size: $xSmall;
+    }
   }
 }
 

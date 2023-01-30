@@ -3,34 +3,21 @@ import "../../assets/goLeft.svg";
 import "../../assets/goRight.svg";
 
 export default function Carousel({ pictures }) {
-  let [pictureShown, changePicture] = useState(0);
-  let imgNumber = pictures.length;
+  const [pictureShown, changePicture] = useState(0);
+  const imgNumber = pictures.length;
 
-  const imgPrecedente = () => {
-    if (pictureShown === 0) {
-      changePicture(imgNumber - 1);
-    } else {
-      changePicture(pictureShown - 1);
-    }
-    return changePicture;
-  };
-
-  const nextPicture = () => {
-    if (pictureShown === imgNumber - 1) {
-      changePicture((imgNumber = 0));
-    } else {
-      changePicture(pictureShown + 1);
-    }
-    return changePicture;
-  };
+  const previousPicture = () =>
+    changePicture(pictureShown === 0 ? imgNumber - 1 : pictureShown - 1);
+  const nextPicture = () =>
+    changePicture(pictureShown === imgNumber - 1 ? 0 : pictureShown + 1);
 
   return (
-    <div className='carrousel'>
+    <div className='carousel'>
       {imgNumber > 1 && (
         <svg
           className='arrow arrow__left'
-          alt='Contenu précédent'
-          onClick={imgPrecedente}
+          alt='Image précédente'
+          onClick={previousPicture}
           width='48'
           height='80'
           viewBox='0 0 48 80'
@@ -43,22 +30,20 @@ export default function Carousel({ pictures }) {
           />
         </svg>
       )}
-      {pictures.map((image, index) => {
-        return (
-          <img
-            key={index}
-            className={
-              index === pictureShown ? "picture picture--active" : "picture"
-            }
-            src={image}
-            alt='Logement'
-          />
-        );
-      })}
+      {pictures.map((image, index) => (
+        <img
+          key={index}
+          className={
+            index === pictureShown ? "picture picture--active" : " picture"
+          }
+          src={image}
+          alt='Logement'
+        />
+      ))}
       {imgNumber > 1 && (
         <svg
           className='arrow arrow__right'
-          alt='Contenu suivant'
+          alt='Image suivante'
           onClick={nextPicture}
           width='48'
           height='80'
@@ -72,6 +57,9 @@ export default function Carousel({ pictures }) {
           />
         </svg>
       )}
+      <div className='carousel__info'>
+        {pictureShown + 1}/{imgNumber}
+      </div>
     </div>
   );
 }

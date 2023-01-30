@@ -4,30 +4,6 @@
   height: 750px;
   align-content: center;
   font-family: $font-primary;
-  &__headerDiv {
-    padding: 30px;
-    width: 90%;
-    @include flex-space-center;
-    &--logo {
-      height: 68px;
-    }
-    &--nav {
-      @include flex-space-center;
-      width: 200px;
-      font-size: $medium;
-    }
-    @media all and (max-width: 768px) {
-      text-transform: uppercase;
-      padding: 20px;
-      &--logo {
-        width: 145px;
-      }
-      &--nav {
-        width: 130px;
-        font-size: $xxSmall;
-      }
-    }
-  }
   &__logo {
     height: 250px;
   }

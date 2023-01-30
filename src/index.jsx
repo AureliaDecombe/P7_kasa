@@ -23,6 +23,7 @@ function Root() {
           <Route path='/' element={<HomePage />} />
           <Route path='About' element={<AboutPage />} />
           <Route path='ToRent/:id' element={<ToRentPage />} />
+          <Route path='Error' element={<ErrorPage />} />
         </Routes>
       </div>
       <Footer />
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
         element: <ToRentPage />,
       },
     ],
+  },
+  {
+    path: "/Error",
+    element: <ErrorPage />,
   },
 ]);
 
