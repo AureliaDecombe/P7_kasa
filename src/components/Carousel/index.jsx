@@ -1,6 +1,4 @@
 import { useState } from "react";
-import "../../assets/goLeft.svg";
-import "../../assets/goRight.svg";
 
 export default function Carousel({ pictures }) {
   const [pictureShown, changePicture] = useState(0);

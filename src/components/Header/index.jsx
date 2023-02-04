@@ -1,5 +1,5 @@
-import Logo from "../../assets/lightLogo.svg";
 import { Link, useLocation } from "react-router-dom";
+import Logo from "../../assets/lightLogo.svg";
 import Banner from "../Banner";
 
 export default function Header() {
@@ -26,7 +26,7 @@ export default function Header() {
         {location.pathname === "/" ? (
           <Banner text='Chez vous, partout et ailleurs' />
         ) : location.pathname === "/About" ? (
-          <Banner additionalClass='banner--about' text='' />
+          <Banner additionalClass='banner--about' />
         ) : null}
       </div>
     </header>

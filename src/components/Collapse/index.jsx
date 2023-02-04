@@ -1,6 +1,4 @@
 import { useState } from "react";
-import "../../assets/open-collapse.svg";
-import "../../assets/close-collapse.svg";
 
 const Collapse = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);

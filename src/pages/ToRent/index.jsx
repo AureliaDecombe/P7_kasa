@@ -2,8 +2,6 @@ import { useParams, Navigate } from "react-router-dom";
 import Carousel from "../../components/Carousel";
 import Collapse from "../../components/Collapse";
 import { galleryList } from "../../data/galleryList";
-import "../../assets/full-star.svg";
-import "../../assets/empty-star.svg";
 
 export default function ToRentPage() {
   const { id } = useParams();
@@ -11,13 +9,33 @@ export default function ToRentPage() {
     (placeToRent) => placeToRent.id === id
   );
 
+  const showStars = (rating) => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <svg
+        key={i}
+        className='star'
+        alt={i < rating ? "étoile pleine" : "étoile vide"}
+        width='30'
+        height='30'
+        viewBox='0 0 30 30'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <path
+          d='M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z'
+          fill={i < Math.floor(rating) ? "#FF6060" : "#E3E3E3"}
+        />
+      </svg>
+    ));
+  };
+
   return PlaceToRentData ? (
     <main className='TRmain'>
       <section className='TRcarousel-section'>
         <Carousel pictures={PlaceToRentData.pictures} />
       </section>
       <section className='TRheader-section'>
-        <div className='TRheader-left'>
+        <article className='TRheader-left'>
           <div className='TRheader-left__description'>
             <h1>{PlaceToRentData.title}</h1>
             <h2>{PlaceToRentData.location}</h2>
@@ -27,7 +45,7 @@ export default function ToRentPage() {
               <p key={index}>{tags}</p>
             ))}
           </div>
-        </div>
+        </article>
         <aside className='TRheader-right'>
           <div className='TRheader-right__owner'>
             <p>{PlaceToRentData.host.name}</p>
@@ -57,29 +75,4 @@ export default function ToRentPage() {
   ) : (
     <Navigate to='/Error' />
   );
-}
-
-function showStars(rating, index) {
-  let placeToRentRating = [];
-
-  for (let fullStars = 0; fullStars < 5; fullStars++) {
-    placeToRentRating.push(
-      <svg
-        key={`${index}-${fullStars}`}
-        className='star'
-        alt={fullStars < rating ? "étoile pleine" : "étoile vide"}
-        width='30'
-        height='30'
-        viewBox='0 0 30 30'
-        fill='none'
-        xmlns='http://www.w3.org/2000/svg'
-      >
-        <path
-          d='M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z'
-          fill={fullStars < rating ? "#FF6060" : "#E3E3E3"}
-        />
-      </svg>
-    );
-  }
-  return placeToRentRating;
 }
