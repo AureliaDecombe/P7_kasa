@@ -2,20 +2,18 @@ import { useState } from "react";
 
 export default function Carousel({ pictures }) {
   const [pictureShown, changePicture] = useState(0);
-  const imgNumber = pictures.length;
-
-  const previousPicture = () =>
-    changePicture(pictureShown === 0 ? imgNumber - 1 : pictureShown - 1);
-  const nextPicture = () =>
-    changePicture(pictureShown === imgNumber - 1 ? 0 : pictureShown + 1);
 
   return (
     <div className='carousel'>
-      {imgNumber > 1 && (
+      {pictures.length > 1 && (
         <svg
           className='arrow arrow__left'
           alt='Image précédente'
-          onClick={previousPicture}
+          onClick={() =>
+            changePicture(
+              pictureShown === 0 ? pictures.length - 1 : pictureShown - 1
+            )
+          }
           width='48'
           height='80'
           viewBox='0 0 48 80'
@@ -38,11 +36,15 @@ export default function Carousel({ pictures }) {
           alt='Logement'
         />
       ))}
-      {imgNumber > 1 && (
+      {pictures.length > 1 && (
         <svg
           className='arrow arrow__right'
           alt='Image suivante'
-          onClick={nextPicture}
+          onClick={() =>
+            changePicture(
+              pictureShown === pictures.length - 1 ? 0 : pictureShown + 1
+            )
+          }
           width='48'
           height='80'
           viewBox='0 0 48 80'
@@ -56,7 +58,7 @@ export default function Carousel({ pictures }) {
         </svg>
       )}
       <div className='carousel__info'>
-        {pictureShown + 1}/{imgNumber}
+        {pictureShown + 1}/{pictures.length}
       </div>
     </div>
   );

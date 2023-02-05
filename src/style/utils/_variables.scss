@@ -6,9 +6,6 @@ $color-secondary: white;
 $background: #f6f6f6;
 $gallery-background: #f2f2f2;
 $footer-background: #000000;
-// $btn-background: linear-gradient(170deg, $color-secondary 5%, $color-primary 95%);
-// $btn-background--hover: linear-gradient(170deg, transparent, $light-secondary 10%, $light-primary 95%);
-// $loader-background: radial-gradient(circle, $color-primary, $color-primary 50%, $color-secondary 75%, $color-primary 75%);
 
 /*-----------------------font-size------------------------*/
 $xLarge: 48px;
@@ -18,28 +15,5 @@ $small: 18px;
 $xSmall: 14px;
 $xxSmall: 12px;
 
-/*----------------------box-shadows-----------------------*/
-// $shadow-primary: 2px 2px 10px 1px $background;
-// $shadow-secondary: rgba(0, 0, 0, 0.2) 0px 5px 15px;
-// $shadow-tertiary: rgba(0, 0, 0, 0.2) 0px 2px 10px;
-// $shadow-input: inset 0px 2px 3px #c8c8d1;
-
 /*----------------------typo-----------------------*/
 $font-primary: "Monserrat", sans-serif;
-//$font-logo: "Shrikhand", sans-serif;
-
-/*----------------------transitions-----------------------*/
-//$trans-primary: all 0.5s ease;
-
-/*----------------------animations-----------------------*/
-// $menu-item__number: 9;
-// $menu-item__duration: 2.5s;
-// $menu-item__delay: calc(($menu-item__duration / $menu-item__number) * 2);
-
-// $menu-opening__number: 3;
-// $menu-opening__duration: 1.15s;
-// $menu-opening__delay: calc(
-//   ($menu-opening__duration / $menu-opening__number) * 2.8
-// );
-
-// $anim--menu__title: menu__item $menu-item__duration ease-in-out both;

@@ -1,7 +1,7 @@
 .TRmain {
   padding: 0 30px;
   .TRheader-section {
-    @include flex-space-nowrap;
+    @include flex-nowrap-space;
     .TRheader-left {
       @include flex-column-between;
       padding: 20px 20px 0 0;
@@ -31,7 +31,7 @@
       width: 40%;
       @include flex-column-end;
       &__owner {
-        @include flex-basic;
+        @include flex-align_center;
         margin-bottom: 30px;
         font-size: $small;
       }
@@ -51,7 +51,7 @@
   }
   .TRcollapse-section {
     ul {
-      @include flex-space-wrap;
+      @include flex-wrap-space;
       li {
         width: 46%;
         div > span,
@@ -86,7 +86,7 @@
         }
       }
       .TRheader-right {
-        @include flex-space-nowrap-reverse;
+        @include flex-nowrap-reverse-space;
         width: 100%;
         &__owner {
           margin-bottom: 0;

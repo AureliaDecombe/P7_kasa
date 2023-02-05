@@ -1,6 +1,6 @@
 .HomePageCard {
   @include card-sizing;
-  @include flex-end;
+  @include flex-align_end;
   margin-bottom: 50px;
   position: relative;
   &__image {
@@ -16,7 +16,7 @@
     width: 100%;
     padding: 15px;
     border-radius: 0 0 10px 10px;
-    @include card__typo;
+    @include card_typo;
     @include flex-row-wrap;
     background: linear-gradient(
       180deg,

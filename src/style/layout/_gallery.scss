@@ -1,5 +1,5 @@
 .gallery {
-  @include flex-space-wrap;
+  @include flex-wrap-space;
   border-radius: 25px;
   background: $gallery-background;
   padding: 50px;

@@ -1,9 +1,13 @@
 /*----------------------------display------------------------------*/
-@mixin flex-basic {
+@mixin flex-align_center {
   display: flex;
   align-items: center;
 }
-@mixin flex-center {
+@mixin flex-align_end {
+  display: flex;
+  align-items: flex-end;
+}
+@mixin flex-full_center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,28 +17,24 @@
   justify-content: space-between;
   align-items: center;
 }
-@mixin flex-space-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 @mixin flex-row-wrap {
   display: flex;
   flex-flow: row wrap;
 }
-@mixin flex-space-nowrap {
+@mixin flex-wrap-space {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@mixin flex-nowrap-space {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-@mixin flex-space-nowrap-reverse {
+@mixin flex-nowrap-reverse-space {
   display: flex;
   flex-flow: row-reverse nowrap;
   justify-content: space-between;
-}
-@mixin flex-end {
-  display: flex;
-  align-items: flex-end;
 }
 @mixin flex-column-between {
   display: flex;
@@ -54,24 +54,36 @@
 }
 
 /*-----------------------------typo------------------------------*/
-@mixin card__typo {
+@mixin card_typo {
   color: $color-secondary;
   font-size: $small;
-} //OK
-@mixin collapse__title {
+}
+@mixin collapse-title_typo {
   color: $color-secondary;
   font-size: $medium;
-} //OK
+}
+@mixin collapse-content_typo {
+  font-size: $medium;
+  font-weight: lighter;
+}
+@mixin error-page_typo {
+  color: $color-primary;
+  font-family: $font-primary;
+}
+@mixin carousel-info_typo {
+  font-size: $small;
+  color: $color-secondary;
+}
 
 /*----------------------------sizing------------------------------*/
 @mixin card-sizing {
   border-radius: 10px;
   height: 340px;
   width: 100%;
-} //OK
+}
 @mixin card-sizing-768px {
   height: 255px;
-} //OK
+}
 
 // /*----------------------------shadow------------------------------*/
 // @mixin new-shadow($color: lightness-shift($color-tertiary)) {

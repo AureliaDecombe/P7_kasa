@@ -2,19 +2,18 @@
   width: 80%;
   margin: 30px auto;
   &__toggle {
-    @include flex-space-wrap;
+    @include flex-wrap-space;
     background-color: $color-primary;
     padding: 20px;
     border-radius: 5px;
     span {
-      @include collapse__title;
+      @include collapse-title_typo;
     }
   }
   &__content {
     background: $gallery-background;
-    font-size: $medium;
+    @include collapse-content_typo;
     padding: 20px;
-    font-weight: lighter;
     border-radius: 0 0 10px 10px;
   }
   @media all and (max-width: 768px) {

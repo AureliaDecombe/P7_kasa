@@ -1,12 +1,12 @@
 .banner {
   height: 223px;
+  background-size: 100% 100%;
+  border-radius: 25px;
   background: rgba(0, 0, 0, 0.3);
   background-image: url(../../assets/banner.webp);
   background-blend-mode: darken;
-  background-size: 100% 100%;
-  border-radius: 25px;
   overflow: hidden;
-  @include flex-center;
+  @include flex-full_center;
   &__span {
     z-index: 1;
     color: $color-secondary;

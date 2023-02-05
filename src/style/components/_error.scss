@@ -1,9 +1,8 @@
 .errorPage {
-  color: $color-primary;
+  @include error-page_typo;
   @include flex-column-around;
   height: 750px;
   align-content: center;
-  font-family: $font-primary;
   &__logo {
     height: 250px;
   }
