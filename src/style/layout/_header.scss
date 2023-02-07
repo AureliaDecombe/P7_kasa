@@ -8,9 +8,9 @@
     @include flex-space-center;
     width: 200px;
     font-size: $medium;
-  }
-  .active {
-    text-decoration: underline;
+    &--active {
+      text-decoration: underline;
+    }
   }
   @media all and (max-width: 768px) {
     text-transform: uppercase;

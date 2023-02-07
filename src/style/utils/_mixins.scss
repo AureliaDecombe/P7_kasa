@@ -66,12 +66,20 @@
   font-size: $medium;
   font-weight: lighter;
 }
-@mixin error-page_typo {
-  color: $color-primary;
-  font-family: $font-primary;
-}
 @mixin carousel-info_typo {
   font-size: $small;
+  color: $color-secondary;
+}
+@mixin banner-span_typo {
+  color: $color-secondary;
+  font-size: $xLarge;
+}
+@mixin footer-div_typo {
+  font-size: $medium;
+  color: $color-secondary;
+}
+@mixin toRent-tag_typo {
+  font-size: $xSmall;
   color: $color-secondary;
 }
 
@@ -80,9 +88,6 @@
   border-radius: 10px;
   height: 340px;
   width: 100%;
-}
-@mixin card-sizing-768px {
-  height: 255px;
 }
 
 // /*----------------------------shadow------------------------------*/

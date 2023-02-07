@@ -8,7 +8,7 @@ export default function ErrorPage() {
   console.error(error);
 
   return (
-    <>
+    <div className='errorPageBody'>
       <Header />
       <div className='errorPage'>
         <img className='errorPage__logo' src={ErrorImg} alt='Erreur 404'></img>
@@ -20,6 +20,6 @@ export default function ErrorPage() {
         </Link>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

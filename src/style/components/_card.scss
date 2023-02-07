@@ -28,10 +28,10 @@
     }
   }
   @media all and (max-width: 768px) {
-    @include card-sizing-768px;
+    height: 255px;
     margin-bottom: 30px;
     &__image--img {
-      @include card-sizing-768px;
+      height: 255px;
     }
   }
   @media all and (max-width: 375px) {

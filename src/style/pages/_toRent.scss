@@ -18,9 +18,8 @@
       &__tags {
         @include flex-row-wrap;
         p {
-          color: $color-secondary;
+          @include toRent-tag_typo;
           background-color: $color-primary;
-          font-size: $xSmall;
           border-radius: 50px;
           padding: 3px 15px 3px 15px;
           margin: 0 10px 10px 0;

@@ -11,12 +11,19 @@ export default function Header() {
           <img src={Logo} alt='logo KASA'></img>
         </Link>
         <nav className='headerDiv__nav'>
-          <Link to='/' className={location.pathname === "/" ? "active" : ""}>
+          <Link
+            to='/'
+            className={
+              location.pathname === "/" ? "headerDiv__nav--active" : ""
+            }
+          >
             Accueil
           </Link>
           <Link
             to='/About'
-            className={location.pathname === "/About" ? "active" : ""}
+            className={
+              location.pathname === "/About" ? "headerDiv__nav--active" : ""
+            }
           >
             À propos
           </Link>

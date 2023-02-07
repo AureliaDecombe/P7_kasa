@@ -9,8 +9,7 @@
   @include flex-full_center;
   &__span {
     z-index: 1;
-    color: $color-secondary;
-    font-size: $xLarge;
+    @include banner-span_typo;
   }
   @media all and (max-width: 768px) {
     height: 175px;
