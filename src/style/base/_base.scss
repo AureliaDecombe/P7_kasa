@@ -10,21 +10,6 @@ a {
   color: inherit;
   cursor: pointer;
 }
-button {
-  background-color: transparent;
-  color: inherit;
-  border-width: 0;
-  padding: 0;
-  cursor: pointer;
-}
-figure {
-  margin: 0;
-}
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
 ul {
   margin: 0;
   padding: 0;
@@ -69,5 +54,8 @@ body {
   }
   a:hover {
     text-decoration: underline;
+  }
+  li {
+    cursor: pointer;
   }
 }
