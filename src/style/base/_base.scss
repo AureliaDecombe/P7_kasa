@@ -55,6 +55,9 @@ body {
   a:hover {
     text-decoration: underline;
   }
+  a:focus-visible {
+    outline: 4px dashed darkorange !important;
+  }
   li {
     cursor: pointer;
   }
