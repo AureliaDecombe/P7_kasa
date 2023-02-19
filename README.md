@@ -4,7 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the frontend directory, you have to run:
+Clone the repo and create your own package json with
+
+### `npm init`
+
+Then, you have to run:
 
 ### `npm start`
 
